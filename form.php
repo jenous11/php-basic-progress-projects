@@ -24,6 +24,7 @@
             <option value="dog">dog</option>
             <option value="cat">cat</option>
             <option value="bird">bird</option>
+            <option value="haster">hamster</option>
             <option value="none">none</option>
         </select>
         <br>
