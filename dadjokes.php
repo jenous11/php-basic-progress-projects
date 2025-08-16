@@ -10,31 +10,35 @@
         Welcome to  dad joke generator!
     </h1>
     <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
-    <button type="submit">Tell me!</button>
+    <button type="submit" onclick="myFunction()">Crack One!</button>
     </form>
-<br>
-    <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="get">
-    <button type="submit">answer!</button>
-    </form>
+
 
 </body>
 </html>
 
 <?php
 echo "<br>";
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-// $array=" why does a house wear? ";
-// echo $array;
-$arrays=["what does a house wear? "=>"address"];
-echo(print_r($array));
-}
+echo "<br>";
 
-if($_SERVER["REQUEST_METHOD"]=="GET"){
-  foreach($arrays as $array){
-    echo $array;
-  }
-// $array2="ADDRESS 👗🥻";
-// echo $array2;
+$rnum =rand(0,2);
 
-}
+$jokes=[
+     "what does a house wear? ",
+    "why can't a cycle stand on it's own?",
+    "which fruit suddenly becomes visible?"
+];
+
+$ans=[
+    "Address 👗👗",
+    "Because it's too tired 🚲🚲",
+    "appear 🍐"
+];
+    if($_SERVER["REQUEST_METHOD"]=="POST" ){
+        echo $jokes[$rnum]."<br>";
+        echo $ans[$rnum];
+
+    }
+
+
 ?>
