@@ -4,4 +4,11 @@ $dbusername="root";  // these are the defaults
 $dbpassword="chelse@11";
 
 //connect
-$pdo = new PDO($dsn,$dbusername,$dbpassword); //pdo=php data objects
+try{
+
+    $pdo = new PDO($dsn,$dbusername,$dbpassword); //pdo=php data objects
+    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+}
+catch (exception $e){
+echo"the cause of error is: ".$e->getMessage();
+}

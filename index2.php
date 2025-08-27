@@ -7,10 +7,10 @@
 </head>
 <body>
 
-   <form action="includes/form.php" method="post">
+<form action="includes/form.php" method="post">
     id
 <input type="id" name = "id" placeholder="id">
-   username
+    username
 <input type="text" name="username" placeholder="username">
 
 
